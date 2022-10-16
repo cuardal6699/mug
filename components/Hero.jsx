@@ -3,12 +3,12 @@ import Image from "next/image";
 import BG from "../public/img/bg.png";
 // import N from '../assets/img/neymar.png'
 
-function hero() {
+export default function Hero() {
   const [image, setImage] = useState(0);
   return (
     <div className="relative">
       <div className="absolute -z-20 w-full h-full">
-        <Image src={BG} layout="fill" />
+        <Image src={BG} layout="fill" alt="" />
       </div>
       <button
         disabled={image <= 0}
@@ -30,7 +30,5 @@ function hero() {
     </div>
   );
 }
-
-export default hero;
 
 const IMAGES = ["/img/messi.png", "/img/neymar.png", "/img/mpabbe.png"];
